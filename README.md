@@ -1,6 +1,3 @@
-Of course. This is a fascinating challenge. The shift in scope from a public, distributable suite to a personal tool for a single user significantly changes the technical recommendations. Performance and distribution polish become less important, while development speed and ease of iteration become paramount.
-
-Here is the detailed technical and architectural specification document for Project Charisma, designed for you, Jules, with this new scope in mind.
 
 Generated markdown
 # Technical Architecture Specification: Project Charisma
