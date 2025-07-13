@@ -1,5 +1,4 @@
 
-Generated markdown
 # Technical Architecture Specification: Project Charisma
 
 **Document Version:** 1.0
@@ -161,7 +160,6 @@ The structure must be strict to ensure interoperability between the Editor and E
 | |-- /events/ # Lua scripts for events (e.g., odessa_day.lua).
 | |-- /ai/ # Lua scripts for custom AI behaviors.
 
-Generated code
 *   **Data Format:** All `.json` files will use a clear, well-documented schema. Use IDs (e.g., `unit_id: "ms-06j"`) to link data between files instead of embedding objects.
 *   **Export Package (`.cpx`):** This will be a standard `.zip` archive of the entire Project Folder, renamed with a custom extension. The engine will know how to load from a folder or transparently from a zip archive.
 *   **Save Games:** Will be stored separately by the Engine (e.g., in the user's Documents folder), not in the project directory. A save game is essentially a snapshot (a serialization using `pickle` or a deep JSON dump) of the current game state (all unit positions, HPs, faction resources, event flags, etc.).
@@ -186,8 +184,4 @@ Generated code
     *   Build the Lua API bridge (`api.py`) and test it with a simple "Hello World" event.
     *   Implement combat, AI, and other game mechanics, hooking them into the Lua API as you go.
 6.  **Continuous Integration:** A GitHub Action should be configured to run `black --check .` and `isort --check .` on every commit to maintain code quality.
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-IGNORE_WHEN_COPYING_END
+
