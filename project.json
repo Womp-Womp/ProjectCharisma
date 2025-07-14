@@ -1,0 +1,6 @@
+{
+    "name": "MyGundamMod",
+    "author": "Jules",
+    "starting_faction": "earth_federation",
+    "map_file": "maps/earth_sphere.json"
+}
