@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "id": "ms-06j",
+        "name": "Zaku II",
+        "hp": 100,
+        "movement": 5,
+        "faction_id": "zeon",
+        "abilities": []
+    },
+    {
+        "id": "rx-78-2",
+        "name": "Gundam",
+        "hp": 150,
+        "movement": 6,
+        "faction_id": "eff",
+        "abilities": []
+    }
+]
