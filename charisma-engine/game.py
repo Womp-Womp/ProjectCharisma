@@ -1,35 +1,16 @@
-# This will be the main entry point for the Charisma Engine
-import arcade
-from engine.state import MainMenuState
-
-class Game(arcade.Window):
-    def __init__(self):
-        super().__init__(800, 600, "Charisma Engine")
-        arcade.set_background_color(arcade.color.BLACK)
-        self.current_state = None
-
-    def setup(self):
-        self.change_state(MainMenuState(self))
-
-    def change_state(self, new_state):
-        if self.current_state:
-            self.current_state.on_exit()
-        self.current_state = new_state
-        self.current_state.on_enter()
-
-    def on_draw(self):
-        self.clear()
-        if self.current_state:
-            self.current_state.on_draw()
-
-    def on_update(self, delta_time):
-        if self.current_state:
-            self.current_state.on_update(delta_time)
+import json
+from charisma_common.models import Unit, Faction
 
 def main():
-    window = Game()
-    window.setup()
-    arcade.run()
+    with open("data/units.json") as f:
+        unit_data = json.load(f)
+        units = [Unit(**u) for u in unit_data]
+        print(f"Loaded {len(units)} units")
+
+    with open("data/factions.json") as f:
+        faction_data = json.load(f)
+        factions = [Faction(**f) for f in faction_data]
+        print(f"Loaded {len(factions)} factions")
 
 if __name__ == "__main__":
     main()
